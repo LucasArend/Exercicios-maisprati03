@@ -1,0 +1,407 @@
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.384);
+  z-index: -1;
+}
+
+body{
+    color: #E0E0E0 ;
+    background-image: url('mtgbackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+nav{
+    position: relative;
+    background: linear-gradient(#2e3e78, #5c6896a1, #737ea554, #8b94b407);
+    padding: 2vh;
+    display: flex;
+    opacity: 0.9;
+    top:0;
+    left: 0;
+}
+
+nav a{
+    color: #E0E0E0 ;
+    margin: 1vh;
+    border-color: #444444;
+    text-decoration: none;
+    padding: 2vh;
+}
+
+nav a:hover{
+    border-radius: 5px;
+    background-color: #737ea554;
+}
+
+
+.container{
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+    
+}
+
+.contentCenter {
+    justify-content: center;
+    width: 100%;
+    align-self: center;
+    margin-top: 20vh;
+}
+
+.contentCenter:first-child {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+span{
+    display:flex;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.buttonCardGenerator{
+    background-color: #2e3e78b4;
+    color: #E0E0E0;
+    border:hidden;
+    border-radius: 5px;
+    margin-top: 1vh;
+    padding: 2vh;
+    max-width: 30vh;
+}
+
+.buttonCardGenerator:hover{
+    background-color: #2e3e78;
+    cursor: pointer;
+}
+
+
+
+#cartas-magic {
+  display: grid;
+  grid-template-columns: repeat(3, 250px); 
+  grid-template-rows: repeat(3, auto);   
+  gap: 20px;                             
+  padding: 20px;
+  justify-content: center;       
+  max-width: max-content;                                
+  box-sizing: border-box;
+  min-width: 520px;
+}
+
+#cartas-magic img {
+  width: 250px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: block;
+
+  
+}
+
+@media (max-width: 780px) {
+  #cartas-magic {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  #cartas-magic {
+    justify-items: center;
+    grid-template-columns: repeat(1, minmax(250px, 1fr));
+  }
+}
+
+.loader-wrapper {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    color: #E0E0E0;
+    font-family: sans-serif;
+}
+
+
+
+
+#loader-img {
+    width: 80px;
+    height: 80px;
+    animation: spin 3s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.containerFormulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 2vw;
+}
+
+
+.formulario {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  max-width: 500px;
+  width: 100%;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 12px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+  outline: none;
+  border-color: #455387;
+  box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.3);
+}
+
+.formulario textarea {
+  resize: vertical;
+  min-height: 100px;
+  resize: none
+}
+
+.formulario button {
+  background-color: #455387;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+  background-color: #2e3e78;
+}
+
+
+.containerListas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.listaNaoOrdenada {
+  list-style: none;     
+  padding: 2vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+
+}
+
+.listaNaoOrdenada li {
+  background-color: #2b3036;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  color:rgb(255, 255, 255);
+  margin: 5px;
+}
+
+.listaNaoOrdenada li:hover {
+  background-color: #24282d;
+}
+
+.listas{
+  background-color: #1a1a1a00;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 5vh;
+
+}
+
+.divOrdenada{
+    width: 80%;
+  height: 50%;
+  margin: 5vh;
+  padding: 0;
+  align-content: center;
+  align-items: center;
+    background-color: #15181b;
+  border-radius: 18px;
+  padding: 4vh;
+}
+
+.divOrdenada h1{
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+.divNaoOrdenada h1,
+.divOrdenada h1,
+.links h1 {
+  border-bottom: 2px solid #ffffff2c; 
+  padding-bottom: 3vh
+}
+
+.divNaoOrdenada{
+  background-color: #15181b;
+  border-radius: 18px;
+  padding: 2vh;
+}
+
+.listaOrdenada{
+
+  font-family: Arial, sans-serif;
+  counter-reset: item;
+  list-style: none;
+
+}
+
+
+.listaOrdenada li {
+  counter-increment: item;
+  background: #2b3036;
+  color: #fff;
+  margin: 12px 0;
+  padding: 16px 20px;
+  border-radius: 8px;
+  position: relative;
+  padding-left: 60px;
+  transition: background 0.3s;
+}
+
+.listaOrdenada li::before {
+  content: counter(item);
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: #2e3e78;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.listaOrdenada li:hover {
+  background: #24282d;
+}
+
+
+.links{
+  background-color: #15181b;
+  padding: 2vh;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.visaoDiv{
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.visao{
+  background: #151b1b;
+  width: 80%;
+  height: 50%;
+  border-radius: 18px;
+}
+
+section h2{
+  font-family: 'Playfair Display', serif;
+}
+
+section p{
+  font-family: 'Lato', sans-serif;
+}
+
+
+
+
+a {
+  text-decoration: none;
+  color: #0077b5;
+  font-weight: bold;
+}
+
+a i {
+  margin-right: 8px;
+}
+
+.hamburguer {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .hamburguer {
+    display: flex;
+  }
+
+  nav.ocultar {
+    display: none;
+    flex-direction: column;
+    background: none;              
+    background-color: #1a1a1a;
+    opacity: 1; 
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+  nav.ocultar.mostrar {
+    display: flex;
+  }
+}
