@@ -4,7 +4,7 @@ body::before {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.384);
+  background: rgba(0, 0, 0, 0.678);
   z-index: -1;
 }
 
@@ -18,7 +18,7 @@ body{
 }
 nav{
     position: relative;
-    background: linear-gradient(#2e3e78, #5c6896a1, #737ea554, #8b94b407);
+    background: linear-gradient(#003061ab,#000a580a);
     padding: 2vh;
     display: flex;
     opacity: 0.9;
@@ -69,17 +69,18 @@ span{
 }
 
 .buttonCardGenerator{
-    background-color: #2e3e78b4;
+    background-color: #2e3e7800;
     color: #E0E0E0;
     border:hidden;
     border-radius: 5px;
     margin-top: 1vh;
     padding: 2vh;
     max-width: 30vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 .buttonCardGenerator:hover{
-    background-color: #2e3e78;
+    background-color: #2e3e7841;
     cursor: pointer;
 }
 
@@ -215,8 +216,9 @@ span{
 
 .containerListas {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -251,7 +253,7 @@ span{
   align-content: center;
   align-items: center;
   display: flex;
-  flex-direction: column;
+
   padding: 5vh;
 
 }
@@ -274,17 +276,23 @@ span{
   align-items: center;
 }
 
-.divNaoOrdenada h1,
+.divRight h1,
 .divOrdenada h1,
 .links h1 {
   border-bottom: 2px solid #ffffff2c; 
   padding-bottom: 3vh
 }
 
+.divRight{
+  border-radius: 18px;
+  padding: 2vh;
+}
+
 .divNaoOrdenada{
   background-color: #15181b;
   border-radius: 18px;
   padding: 2vh;
+  text-align: center;
 }
 
 .listaOrdenada{
@@ -335,25 +343,43 @@ span{
   padding: 2vh;
   border-radius: 18px;
   text-align: center;
+  margin-top: 1vh;
 }
 
 .visaoDiv{
   display: flex;
-  
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
+.visaoDiv p{
+  text-align: justify;
+}
+
 .visao{
-  background: #151b1b;
-  width: 80%;
+  background: #151b1b00;
+  width: 90%;
   height: 50%;
   border-radius: 18px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  padding: 2vh;
+  letter-spacing: 2px;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+section{
+  margin-bottom: 10vh;
 }
 
 section h2{
   font-family: 'Playfair Display', serif;
+  margin-bottom: 5vh;
+  border-bottom: 3px solid #151b1b38;
+  padding-bottom: 0.3rem;
 }
 
 section p{
